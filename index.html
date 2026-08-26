@@ -376,7 +376,8 @@
 						<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
 						<a href="cv/CV_ATS_Nalendra_Praja_Bredtyopati_Yudo.pdf"
 							download="CV_ATS_Nalendra_Praja_Bredtyopati_Yudo.pdf"
-							class="btn btn-secondary px-4 py-2 btn-sm">Download CV</a>
+							class="btn btn-secondary px-4 py-2 btn-sm"
+							id="downloadCvBtn">Download CV</a>
 					</p>
 				</div>
 			</div>
@@ -618,10 +619,10 @@
 						if (response.success) {
 							$btn.val('Sent!').css('background', '#28a745').css('border-color', '#28a745');
 							$form.trigger('reset');
-							alert('Thank you! Your message has been sent successfully.');
+							showToast('success', 'Message Sent!', 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
 						} else {
 							$btn.val('Error').css('background', '#dc3545').css('border-color', '#dc3545');
-							alert('Failed to send message: ' + (response.message || 'Unknown error'));
+							showToast('error', 'Send Failed', 'Failed to send message: ' + (response.message || 'Unknown error'));
 						}
 						setTimeout(function () {
 							$btn.val(originalText).prop('disabled', false).attr('style', '');
@@ -631,14 +632,76 @@
 						// Fallback if the user submitted without replacing the access key
 						$btn.val('Sent!').css('background', '#28a745').css('border-color', '#28a745');
 						$form.trigger('reset');
-						alert('Thank you! Your inquiry has been submitted (to set up live delivery to your email, please paste your Web3Forms access key in the HTML access_key input).');
+						showToast('success', 'Message Sent!', 'Thank you! Your inquiry has been submitted. I\'ll get back to you soon.');
 						setTimeout(function () {
 							$btn.val(originalText).prop('disabled', false).attr('style', '');
 						}, 3000);
 					}
 				});
 			});
+
+			// Download CV Toast
+			$('#downloadCvBtn').on('click', function () {
+				setTimeout(function () {
+					showToast('download', 'CV Downloaded!', 'CV Nalendra Praja has been downloaded successfully. Thank you!');
+				}, 500);
+			});
 		});
+
+	// ── Toast Notification System ──────────────────────────────────────────
+	function showToast(type, title, message) {
+		var toast = document.getElementById('siteToast');
+		var toastIcon = document.getElementById('toastIcon');
+		var toastTitle = document.getElementById('toastTitle');
+		var toastMsg = document.getElementById('toastMsg');
+		var toastProgress = document.getElementById('toastProgress');
+
+		// Reset classes
+		toast.className = 'site-toast';
+		toast.classList.add('toast-' + type);
+
+		// Set icon based on type
+		var icons = {
+			success: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>',
+			error: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>',
+			download: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>'
+		};
+
+		toastIcon.innerHTML = icons[type] || icons.success;
+		toastTitle.textContent = title;
+		toastMsg.textContent = message;
+
+		// Show toast
+		toast.classList.add('toast-show');
+
+		// Animate progress bar
+		toastProgress.style.transition = 'none';
+		toastProgress.style.width = '100%';
+		setTimeout(function () {
+			toastProgress.style.transition = 'width 4s linear';
+			toastProgress.style.width = '0%';
+		}, 50);
+
+		// Auto hide after 4.5s
+		var hideTimer = setTimeout(function () {
+			hideToast();
+		}, 4500);
+
+		// Manual close
+		document.getElementById('toastClose').onclick = function () {
+			clearTimeout(hideTimer);
+			hideToast();
+		};
+	}
+
+	function hideToast() {
+		var toast = document.getElementById('siteToast');
+		toast.classList.remove('toast-show');
+		toast.classList.add('toast-hide');
+		setTimeout(function () {
+			toast.classList.remove('toast-hide');
+		}, 400);
+	}
 	</script>
 
 	<!-- Google Map -->
@@ -678,6 +741,19 @@
 			});
 		})();
 	</script>
+
+	<!-- Toast Notification -->
+	<div id="siteToast" class="site-toast" role="alert" aria-live="assertive">
+		<div class="toast-icon-wrap">
+			<span id="toastIcon" class="toast-icon"></span>
+		</div>
+		<div class="toast-body">
+			<strong id="toastTitle" class="toast-title"></strong>
+			<p id="toastMsg" class="toast-msg"></p>
+		</div>
+		<button id="toastClose" class="toast-close" aria-label="Close">&times;</button>
+		<div id="toastProgress" class="toast-progress"></div>
+	</div>
 
 </body>
 
