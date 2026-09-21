@@ -644,17 +644,68 @@ a {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important; }
 
-/* Custom Portfolio Card Styles */
-.portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+/* Custom Portfolio Horizontal Scroll Styles */
+.portfolio-slider-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.portfolio-item {
-  margin-bottom: 30px;
+.portfolio-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 24px;
+  padding: 15px 5px 25px 5px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  cursor: grab;
+  user-select: none;
+}
+
+.portfolio-scroll-container.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.portfolio-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.portfolio-scroll-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+
+.portfolio-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.portfolio-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+.portfolio-scroll-container .portfolio-item {
+  flex: 0 0 360px;
+  max-width: 360px;
+  min-width: 320px;
+  scroll-snap-align: start;
+  margin-bottom: 0;
+  display: flex;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .portfolio-scroll-container .portfolio-item {
+    flex: 0 0 85vw;
+    max-width: 330px;
+    min-width: 280px;
+  }
 }
 
 .portfolio-card {
@@ -662,8 +713,8 @@ a {
   border: 1px solid #eef2f5;
   border-top: 3px solid rgba(0, 0, 0, 0.08);
   border-radius: 8px;
-  padding: 30px;
-  height: 100%;
+  padding: 28px 24px;
+  width: 100%;
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
               box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
               border-color 0.3s ease;
@@ -716,10 +767,10 @@ a {
 .portfolio-title {
   color: #000;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
   line-height: 1.4;
-  padding-right: 15px;
+  padding-right: 12px;
 }
 
 .portfolio-year {
@@ -740,40 +791,107 @@ a {
 
 .portfolio-description {
   color: #555;
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 1.6;
   margin: 0;
   flex-grow: 1;
 }
 
-.load-more-container {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  width: 100%;
-}
-
-.btn-load-more {
-  background: transparent;
-  color: #333;
-  border: 2px solid rgba(0, 0, 0, 0.15);
-  padding: 12px 35px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 30px;
+/* Navigation Arrow Buttons */
+.portfolio-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
   cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  outline: none !important;
 }
 
-.btn-load-more:hover {
+.portfolio-nav-btn:hover:not(:disabled) {
   background: #3b82f6;
   border-color: #3b82f6;
-  color: #fff;
-  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.2);
-  text-decoration: none;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.portfolio-nav-btn:disabled,
+.portfolio-nav-btn.btn-disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.portfolio-nav-btn.prev-btn {
+  left: -22px;
+}
+
+.portfolio-nav-btn.next-btn {
+  right: -22px;
+}
+
+@media (max-width: 991px) {
+  .portfolio-nav-btn.prev-btn {
+    left: -10px;
+  }
+  .portfolio-nav-btn.next-btn {
+    right: -10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-nav-btn {
+    display: none;
+  }
+}
+
+/* Progress indicator and navigation hint */
+.portfolio-scroll-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.portfolio-progress-wrapper {
+  width: 180px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #3b82f6;
+  border-radius: 4px;
+  transition: width 0.15s ease-out;
+}
+
+.portfolio-scroll-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 /* Tech Stack Carousel Styles */
