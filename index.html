@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css?v=3.5">
+	<link rel="stylesheet" href="css/style.css?v=3.6">
 
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
@@ -860,15 +860,20 @@
 			// Auto-scroll controller (pauses on hover, drag, touch, or button click)
 			var isPortfolioHovered = false;
 			var isAutoResetting = false;
+			var portfolioTouchTimer = null;
 			var portfolioLastTime = null;
 			var portfolioExactScroll = 0;
-			var portfolioSpeed = 35; // pixels per second
+			var portfolioSpeed = 55; // pixels per second
 
 			container.addEventListener('mouseenter', function () { isPortfolioHovered = true; });
 			container.addEventListener('mouseleave', function () { isPortfolioHovered = false; });
-			container.addEventListener('touchstart', function () { isPortfolioHovered = true; }, { passive: true });
+			container.addEventListener('touchstart', function () {
+				clearTimeout(portfolioTouchTimer);
+				isPortfolioHovered = true;
+			}, { passive: true });
 			container.addEventListener('touchend', function () {
-				setTimeout(function () { isPortfolioHovered = false; }, 1500);
+				clearTimeout(portfolioTouchTimer);
+				portfolioTouchTimer = setTimeout(function () { isPortfolioHovered = false; }, 1600);
 			});
 
 			if (prevBtn) {
@@ -1013,11 +1018,12 @@
 
 				var isPaused = false;
 				var isDragging = false;
+				var techTouchTimer = null;
 				var startX = 0;
 				var scrollStart = 0;
 				var lastTime = null;
 				var exactScroll = 0;
-				var pixelsPerSecond = 45;
+				var pixelsPerSecond = 60;
 
 				function autoScroll(timestamp) {
 					if (lastTime === null) lastTime = timestamp;
@@ -1046,8 +1052,14 @@
 					isPaused = false;
 					isDragging = false;
 				});
-				techContainer.addEventListener('touchstart', function () { isPaused = true; }, { passive: true });
-				techContainer.addEventListener('touchend', function () { isPaused = false; });
+				techContainer.addEventListener('touchstart', function () {
+					clearTimeout(techTouchTimer);
+					isPaused = true;
+				}, { passive: true });
+				techContainer.addEventListener('touchend', function () {
+					clearTimeout(techTouchTimer);
+					techTouchTimer = setTimeout(function () { isPaused = false; }, 1600);
+				});
 
 				techContainer.addEventListener('mousedown', function (e) {
 					isDragging = true;
@@ -1139,8 +1151,8 @@
 					}
 				});
 			}, {
-				threshold: 0.04,
-				rootMargin: '0px 0px -10px 0px'
+				threshold: 0.05,
+				rootMargin: '-45px 0px -45px 0px'
 			});
 
 			// Observe all scroll-reveal elements

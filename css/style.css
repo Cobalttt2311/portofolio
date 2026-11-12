@@ -669,7 +669,8 @@ a {
   padding: 15px 5px 25px 5px;
   scroll-snap-type: none;
   scroll-behavior: auto;
-  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+  touch-action: pan-x pan-y;
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
   cursor: grab;
@@ -705,10 +706,8 @@ a {
   flex: 0 0 360px;
   max-width: 360px;
   min-width: 320px;
-  scroll-snap-align: start;
   margin-bottom: 0;
   display: flex;
-  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -926,6 +925,8 @@ a {
   justify-content: flex-start;
   cursor: grab;
   user-select: none;
+  will-change: scroll-position;
+  touch-action: pan-x pan-y;
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
@@ -1514,9 +1515,9 @@ a {
   .scroll-reveal,
   .scroll-reveal.from-left,
   .scroll-reveal.from-right {
-    transform: translateY(18px);
-    transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
-                transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(28px);
+    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .scroll-reveal.revealed,
