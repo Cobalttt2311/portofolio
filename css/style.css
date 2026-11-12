@@ -1511,18 +1511,19 @@ a {
 }
 
 @media (max-width: 767px) {
-  .scroll-reveal {
-    transform: translateY(20px);
+  .scroll-reveal,
+  .scroll-reveal.from-left,
+  .scroll-reveal.from-right {
+    transform: translateY(18px);
     transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
                 transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  .scroll-reveal.from-left {
-    transform: translateX(-20px);
-  }
-
-  .scroll-reveal.from-right {
-    transform: translateX(20px);
+  .scroll-reveal.revealed,
+  .scroll-reveal.from-left.revealed,
+  .scroll-reveal.from-right.revealed {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 
   .editorial-geo {
