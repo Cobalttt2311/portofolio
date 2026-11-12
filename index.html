@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css?v=2.1">
+	<link rel="stylesheet" href="css/style.css?v=3.3">
 
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
@@ -27,7 +27,7 @@
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
 
 		<div class="container">
-			<a class="navbar-brand" href="#section-home" style="border: none !important; padding: 0 !important;">
+			<a class="navbar-brand scroll-reveal" href="#section-home" style="border: none !important; padding: 0 !important;">
 				<img src="images/LogoNP_new.png" alt="LogoNP_new"
 					style="height: 40px; width: auto; border-radius: 4px;">
 			</a>
@@ -38,11 +38,11 @@
 
 
 			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
-				<ul class="navbar-nav">
+				<ul class="navbar-nav scroll-reveal delay-1">
 					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
 				</ul>
 			</div>
@@ -58,316 +58,43 @@
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
 
-					<h1 class="site-heading site-animate">Hello, I'm <strong class="d-block">Nalendra Praja</strong>
+					<h1 class="site-heading site-animate scroll-reveal">Hello, I'm <strong class="d-block">Nalendra Praja</strong>
 					</h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is My Resume</strong>
+					<strong class="d-block text-white text-uppercase letter-spacing scroll-reveal delay-2">and this is My Resume</strong>
 
 				</div>
 			</div>
 		</div>
 	</section> <!-- section -->
 
-
-
-
-
-
-	<section class="site-section" id="section-portfolio">
+	<section class="site-section" id="section-about" style="overflow: hidden;">
 		<div class="container">
-			<div class="row">
-				<div class="section-heading text-center col-md-12 scroll-reveal">
-					<h2>Featured <strong>Portfolio</strong></h2>
+			<div class="row mb-5 align-items-center">
+				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0 scroll-reveal from-left">
+					<img src="images/image_1_sub.jpg" alt="Image placeholder" class="img-fluid">
 				</div>
-			</div>
+				<div class="col-lg-5 pl-lg-5 scroll-reveal from-right delay-2">
+					<div class="section-heading">
+						<h2>About <strong>Me</strong></h2>
+					</div>
+					<p class="lead" style="line-height: 1.75; font-size: 16.5px;">Associate of Computer Engineering
+						graduate from Politeknik Negeri Bandung, currently pursuing a Bachelor's degree in Computer
+						Science at Binus University, with a growing focus on backend development, artificial
+						intelligence, and data engineering. Hands-on exposure includes a backend engineering internship,
+						a government web developer role, and multiple API, data pipeline, and full-stack projects.
+						Seeking to contribute as an IT Developer while continuing to strengthen data-driven engineering
+						capability.</p>
 
-			<div class="portfolio-slider-wrapper">
-				<button class="portfolio-nav-btn prev-btn" id="portfolioPrevBtn" aria-label="Previous Projects">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-						<polyline points="15 18 9 12 15 6"></polyline>
-					</svg>
-				</button>
-
-				<div class="portfolio-scroll-container" id="portfolioScrollContainer">
-					<!-- Project 1 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Congklak Glory</h3>
-								<span class="portfolio-year">2023</span>
-							</div>
-							<p class="portfolio-description">Congklak Glory is a C-based CLI (Command-Line Interface)
-								desktop game that utilizes a Circular Doubly Linked List to dynamically simulate traditional
-								Congklak board mechanics, including continuous seed distribution, move validation, and
-								win-condition tracking.</p>
-							<a href="https://github.com/Cobalttt2311/Tugas-Besar_SDA1_B12" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 2 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Library Based Application Development</h3>
-								<span class="portfolio-year">2024</span>
-							</div>
-							<p class="portfolio-description">A digital information security system developed in C++ that
-								combines AES cryptography and LSB steganography. The application enables users to securely
-								encrypt text, embed hidden messages within image files, and utilizes a Circular Doubly
-								Linked List to optimize data manipulation.</p>
-							<a href="https://github.com/Cobalttt2311/Kelompok-B6" target="_blank" class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 3 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Web Based Software Development</h3>
-								<span class="portfolio-year">2024</span>
-							</div>
-							<p class="portfolio-description">SPIP Polban is a web-based internal control system designed to
-								support government compliance and performance evaluation. Developed using Laravel and
-								PostgreSQL, the platform transforms complex assessment metrics into accessible, data-driven
-								visualizations through dynamic charts and tables.</p>
-							<a href="https://github.com/Yorubreak/PROYEK3_B2_SPIP_2024" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 4 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Mobile Based Software Development</h3>
-								<span class="portfolio-year">2025</span>
-							</div>
-							<p class="portfolio-description">Schedo is a Kotlin-based mobile application designed for task
-								management and scheduling. It features task creation, schedule tracking, file attachments,
-								and automated notifications to enhance personal productivity.</p>
-							<a href="https://github.com/Cobalttt2311/Proyek4-Schedo" target="_blank" class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 5 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Face Recognition Application</h3>
-								<span class="portfolio-year">2025</span>
-							</div>
-							<p class="portfolio-description">A web-based face recognition application built with Python and
-								Streamlit that utilizes CNNs and ensemble learning to perform real-time face detection, age
-								estimation, ethnicity classification, and similarity matching.</p>
-							<a href="https://github.com/Cobalttt2311/Tugas-Besar-PCD" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 6 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">PoseLight Project</h3>
-								<span class="portfolio-year">2025</span>
-							</div>
-							<p class="portfolio-description">This project was inspired by the need to create an interactive
-								interface that integrates computer vision with physical hardware. The main references
-								include the official MediaPipe documentation for pose detection, Streamlit tutorials for
-								real-time web applications, and Arduino guides for serial communication. We also utilized
-								open-source code examples from GitHub repositories related to pose detection and LED
-								control, which were adapted to meet the specific needs of this project.</p>
-							<a href="https://www.youtube.com/watch?v=MG2dBCu96UQ" target="_blank" class="portfolio-link">
-								Watch Video <span class="icon-youtube"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 7 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Mini Project School Management System</h3>
-								<span class="portfolio-year">2025</span>
-							</div>
-							<p class="portfolio-description">A .NET 8 backend mini-project for a School Management System
-								that implements strict Role-Based Access Control (Admin, Teacher, Student) using JWT
-								authentication, utilizing PostgreSQL and Entity Framework Core for secure and isolated data
-								management.</p>
-							<a href="https://github.com/Cobalttt2311/SchoolManagementSystem" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 8 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">International Roamer Project</h3>
-								<span class="portfolio-year">2025</span>
-							</div>
-							<p class="portfolio-description">Developed as a collaborative solution between Telkomsel and PT
-								Neural Technologies Indonesia, International Roamer is an enterprise web platform for
-								monitoring global network performance. The system features two main interactive dashboards
-								Inbound and Outbound that process large-scale telecommunications data to visualize Key
-								Performance Indicators (KPI) and Key Quality Indicators (KQI), enabling rapid fault
-								detection and optimal service quality assurance.</p>
-						</div>
-					</div>
-					<!-- Project 9 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Fix Broadband Project</h3>
-								<span class="portfolio-year">2025</span>
-							</div>
-							<p class="portfolio-description">The Fixed Broadband (FBB) Executive Dashboard is a
-								comprehensive monitoring platform developed by PT Neural Technologies Indonesia for
-								Telkomsel to track nationwide network infrastructure deployment, featuring real-time
-								visualizations of regional progress, LOP funneling, and design lifecycle analytics.</p>
-						</div>
-					</div>
-					<!-- Project 10 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Basketball Recommendation Application Using AHP</h3>
-								<span class="portfolio-year">2026</span>
-							</div>
-							<p class="portfolio-description">A web-based basketball player position recommendation system
-								developed as a dedicated solution. Built with a React JS frontend and a Laravel REST API
-								backed by PostgreSQL, the platform processes data-driven player performance metrics. By
-								implementing a pure Analytical Hierarchy Process (AHP) algorithm, the system evaluates
-								multiple criteria to generate objective, highly accurate player position recommendations,
-								aiding coaching staff in strategic decision-making.</p>
-							<a href="https://github.com/Cobalttt2311/shield-basketball-servicesv2" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 11 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Mini Microservice Application</h3>
-								<span class="portfolio-year">2026</span>
-							</div>
-							<p class="portfolio-description">A backend application based on microservices architecture,
-								utilizing Spring Boot and PostgreSQL, simulates an e-commerce transaction flow in a
-								distributed manner. The project separates system responsibilities into two independent
-								services: the Catalog Service (product inventory management) and the Order Service (customer
-								transaction processing).</p>
-							<a href="https://github.com/Cobalttt2311/MiniMicroservicesApplication" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 12 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Split Bill Application</h3>
-								<span class="portfolio-year">2026</span>
-							</div>
-							<p class="portfolio-description">A backend RESTful API application built with Spring Boot and
-								PostgreSQL/H2 to manage and calculate group expense sharing (Split Bill). The project
-								separates system responsibilities into three key modules: Bill Group (group management),
-								Bill Member (member management), and Bill Detail (transaction splitting logic).</p>
-							<a href="https://github.com/Cobalttt2311/splitapplication/tree/main" target="_blank"
-								class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 13 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">F1 Race Data</h3>
-								<span class="portfolio-year">2026</span>
-							</div>
-							<p class="portfolio-description">F1 Race Data is an automated data engineering pipeline designed
-								to collect, clean, and structure historical and modern Formula 1 datasets into a centralized
-								relational database. The system automatically retrieves raw race data from Kaggle,
-								transforms multi-decade racing archives into clean relational tables, and loads them into
-								PostgreSQL using Python scripts. By automating data validation and scheduled ingestion, the
-								pipeline eliminates manual data processing and establishes a reliable data foundation for
-								downstream analytics and backend services.</p>
-							<a href="https://github.com/Cobalttt2311/f1-race-data" target="_blank" class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 14 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Formula 1 REST API</h3>
-								<span class="portfolio-year">2026</span>
-							</div>
-							<p class="portfolio-description">Formula 1 REST API is a backend web service built with
-								FastAPI and Python to deliver comprehensive Formula 1 racing data and performance analytics
-								through standardized REST endpoints. Following a modular multi-layer architecture, the
-								service processes complex relational data from a PostgreSQL database to serve championship
-								standings, race weekend schedules, pit stop telemetry, and strategic race analytics such as
-								driver form and teammate head-to-head comparisons. The API provides interactive Swagger
-								documentation and is validated with Postman to enable seamless integration with frontend
-								client applications.</p>
-							<a href="https://github.com/Cobalttt2311/f1-api" target="_blank" class="portfolio-link">
-								View on GitHub <span class="icon-github"></span>
-							</a>
-						</div>
-					</div>
-					<!-- Project 15 -->
-					<div class="portfolio-item">
-						<div class="portfolio-card">
-							<div class="portfolio-card-header">
-								<h3 class="portfolio-title">Tifosi F1 Application</h3>
-								<span class="portfolio-year">2026</span>
-							</div>
-							<p class="portfolio-description">Tifosi F1 Application is a responsive web dashboard designed
-								to provide motorsport enthusiasts and analysts with an interactive race tracking and data
-								visualization experience. Built with HTML, Vanilla CSS, and modern JavaScript, the
-								application connects directly to the backend API to display active race statuses, automatic
-								dual-timezone conversions between local Indonesian time (WIB) and UTC, and dynamic
-								lap-by-lap position charts powered by Chart.js. The interface also includes dedicated
-								modules for exploring historical driver profiles, constructor records, and weekend session
-								results across more than 70 years of Grand Prix history.</p>
-							<a href="https://f1-view-nine.vercel.app/" target="_blank" class="portfolio-link">
-								View Live Demo <span class="icon-globe"></span>
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<button class="portfolio-nav-btn next-btn" id="portfolioNextBtn" aria-label="Next Projects">
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-						<polyline points="9 18 15 12 9 6"></polyline>
-					</svg>
-				</button>
-			</div>
-
-			<div class="portfolio-scroll-footer">
-				<div class="portfolio-progress-wrapper">
-					<div class="portfolio-progress-bar" id="portfolioProgressBar"></div>
-				</div>
-				<div class="portfolio-scroll-hint">
-					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-					<span>Drag or scroll horizontally</span>
-					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+					<p>
+						<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
+						<a href="cv/CV_ATS_Nalendra%20Praja%20Bredtyopati%20Yudo.pdf"
+							download="CV_ATS_Nalendra_Praja_Bredtyopati_Yudo.pdf"
+							class="btn btn-secondary px-4 py-2 btn-sm" id="downloadCvBtn">Download CV</a>
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- .section -->
-
 
 	<section class="site-section " id="section-resume">
 		<div class="container">
@@ -383,9 +110,23 @@
 					<h2 class="mb-4"
 						style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; color: #000;">Education
 					</h2>
+					<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
+						<img src="images/Logo_Binus_University.png" alt="Binus University Logo"
+							style="width: 60px; height: 60px; object-fit: contain; flex-shrink: 0;">
+						<div>
+							<h3 style="color: #000; font-size: 20px; font-weight: 600; margin: 0 0 5px 0;">Bachelor of
+								Computer Science</h3>
+							<span
+								style="color: #555; font-size: 15px; font-weight: 500; display: block; margin-bottom: 3px;">Binus
+								University - Online</span>
+							<span
+								style="color: #777; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block;"><span
+									class="icon-calendar"></span> 2026 - Present</span>
+						</div>
+					</div>
 					<div style="display: flex; align-items: center; gap: 20px;">
 						<img src="images/polban-removebg-preview.png" alt="Politeknik Negeri Bandung Logo"
-							style="width: 60px; height: auto; object-fit: contain;">
+							style="width: 60px; height: 60px; object-fit: contain; flex-shrink: 0;">
 						<div>
 							<h3 style="color: #000; font-size: 20px; font-weight: 600; margin: 0 0 5px 0;">Associate of
 								Computer Engineering</h3>
@@ -401,19 +142,61 @@
 
 				<!-- Experience Subsection -->
 				<div class="col-md-12">
-					<h2 class="mb-4"
+					<h2 class="mb-4 scroll-reveal from-left delay-1"
 						style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; color: #000;">Experience
 					</h2>
-					<div class="resume-item mb-4"
-						style="background: #f8f9fa; padding: 30px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.05);">
+
+					<!-- Kementerian Pekerjaan Umum -->
+					<div class="resume-item mb-4 scroll-reveal delay-1"
+						style="background: #fafafa; padding: 30px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.06);">
 						<div
-							style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
-							<div>
-								<h3 style="color: #000; font-size: 22px; font-weight: 500; margin: 0 0 5px 0;">Intern
-									Backend Engineer</h3>
-								<span class="school"
-									style="color: rgba(0,0,0,0.5); font-size: 16px; font-weight: 400;">PT Neural
-									Technologies Indonesia - South Jakarta</span>
+							style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
+							<div style="display: flex; align-items: center; gap: 16px;">
+								<div style="width: 52px; height: 52px; border-radius: 6px; overflow: hidden; flex-shrink: 0;">
+									<img src="images/logo_pu.png" alt="Kementerian Pekerjaan Umum Logo"
+										style="width: 100%; height: 100%; object-fit: cover; display: block;">
+								</div>
+								<div>
+									<h3 style="color: #000; font-size: 22px; font-weight: 500; margin: 0 0 5px 0;">Web
+										Developer</h3>
+									<span class="school"
+										style="color: rgba(0,0,0,0.5); font-size: 16px; font-weight: 400;">Kementerian
+										Pekerjaan Umum - South Jakarta</span>
+								</div>
+							</div>
+							<span class="date"
+								style="color: #777; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;"><span
+									class="icon-calendar"></span> Sep 2026 - Present</span>
+						</div>
+						<p style="color: #555; font-size: 15px; line-height: 1.6; margin-bottom: 20px;">The Ministry of
+							Public Works of the Republic of Indonesia is a government agency responsible for managing
+							affairs in the field of public works to assist the President in administering the
+							government.</p>
+						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Analyzed
+							business processes and designed database schemas to support structured data management for
+							the SIPSPSE monitoring application.</p>
+						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Developed and
+							documented REST APIs using Django for system features and backend integrations.</p>
+						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 0;">• Designed user
+							interfaces using React and integrated frontend-backend components with authentication and
+							role-based access control.</p>
+					</div>
+
+					<!-- PT Neural Technologies Indonesia -->
+					<div class="resume-item mb-4 scroll-reveal delay-2"
+						style="background: #fafafa; padding: 30px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.06);">
+						<div
+							style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
+							<div style="display: flex; align-items: center; gap: 16px;">
+								<img src="images/logo_nti.jpg" alt="PT Neural Technologies Indonesia Logo"
+									style="width: 52px; height: 52px; object-fit: cover; border-radius: 6px; flex-shrink: 0; display: block;">
+								<div>
+									<h3 style="color: #000; font-size: 22px; font-weight: 500; margin: 0 0 5px 0;">Intern
+										Backend Engineer</h3>
+									<span class="school"
+										style="color: rgba(0,0,0,0.5); font-size: 16px; font-weight: 400;">PT Neural
+										Technologies Indonesia - South Jakarta</span>
+								</div>
 							</div>
 							<span class="date"
 								style="color: #777; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;"><span
@@ -423,58 +206,362 @@
 							Technologies Indonesia (NTI) is a technology-driven company focused on delivering
 							innovative, reliable, and scalable solutions to support business growth in an increasingly
 							digital landscape.</p>
-						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Develop and
-							deploy RESTful APIs for web applications.</p>
-						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Perform API
-							testing, centralized documentation, refactoring, and bug fixing.</p>
-						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Validate SQL
-							queries to meet feature requirements.</p>
-						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 0;">• Communicate and
-							collaborate with the team.</p>
+						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Developed and
+							deployed RESTful APIs using ASP.NET Core (.NET 8) for web applications in collaboration with
+							the development team.</p>
+						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 8px;">• Performed API
+							testing, centralized documentation, refactoring, and bug fixing to maintain service
+							reliability.</p>
+						<p style="color: #555; font-size: 14.5px; line-height: 1.7; margin-bottom: 0;">• Validated SQL
+							queries against feature requirements to ensure accurate data retrieval and integrity.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section> <!-- .section -->
 
-	<section class="site-section" id="section-about" style="overflow: hidden;">
-		<div class="container">
-			<div class="row mb-5 align-items-center">
-				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0 scroll-reveal from-left">
-					<img src="images/image_1_sub.jpg" alt="Image placeholder" class="img-fluid">
-				</div>
-				<div class="col-lg-5 pl-lg-5 scroll-reveal from-right delay-2">
-					<div class="section-heading">
-						<h2>About <strong>Me</strong></h2>
-					</div>
-					<p class="lead" style="line-height: 1.8;">I am an Associate of Computer Engineering graduate from
-						Politeknik Negeri Bandung (POLBAN). I have a strong interest in backend development, artificial
-						intelligence, and data engineering. I am highly enthusiastic and eager to learn new things in
-						order to continuously improve myself.</p>
 
-					<p>
-						<a href="#section-contact" class="btn btn-primary px-4 py-2 btn-sm smoothscroll">Hire Me</a>
-						<a href="cv/CV_ATS_Nalendra%20Praja%20Bredtyopati%20Yudo.pdf"
-							download="CV_ATS_Nalendra_Praja_Bredtyopati_Yudo.pdf"
-							class="btn btn-secondary px-4 py-2 btn-sm" id="downloadCvBtn">Download CV</a>
-					</p>
+
+
+
+
+	<section class="site-section" id="section-portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="section-heading text-center col-md-12 scroll-reveal">
+					<h2>Featured <strong>Portfolio</strong></h2>
 				</div>
 			</div>
 
+			<div class="portfolio-slider-wrapper scroll-reveal delay-1">
+				<button class="portfolio-nav-btn prev-btn" id="portfolioPrevBtn" aria-label="Previous Projects">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="15 18 9 12 15 6"></polyline>
+					</svg>
+				</button>
 
+				<div class="portfolio-scroll-container" id="portfolioScrollContainer">
+					<!-- Project 1 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Congklak Glory</h3>
+								<span class="portfolio-year">2024</span>
+							</div>
+							<p class="portfolio-description">Simulated traditional Congklak gameplay mechanics in CLI,
+								including seed distribution, move validation, and win-condition tracking.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">C</span>
+								<span class="portfolio-tag">Linked List</span>
+								<span class="portfolio-tag">CLI</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/Tugas-Besar_SDA1_B12" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 2 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Library Based Application Development</h3>
+								<span class="portfolio-year">2024</span>
+							</div>
+							<p class="portfolio-description">CLI digital information security system combining AES
+								cryptography and LSB steganography to encrypt text and embed hidden messages in images.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">C++</span>
+								<span class="portfolio-tag">AES</span>
+								<span class="portfolio-tag">LSB Steganography</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/Kelompok-B6" target="_blank" class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 3 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">SPIP Polban</h3>
+								<span class="portfolio-year">2024</span>
+							</div>
+							<p class="portfolio-description">Web-based internal control system for Polban supporting
+								evaluation and monitoring via assessment data management and dynamic charts.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Laravel</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+							</div>
+							<a href="https://github.com/Yorubreak/PROYEK3_B2_SPIP_2024" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 4 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Schedo</h3>
+								<span class="portfolio-year">2025</span>
+							</div>
+							<p class="portfolio-description">Kotlin mobile application for personal productivity
+								featuring task creation, schedule tracking, file attachments, and automated notifications.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Kotlin</span>
+								<span class="portfolio-tag">Laravel</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/Proyek4-Schedo" target="_blank" class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 5 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Face Recognition Application</h3>
+								<span class="portfolio-year">2025</span>
+							</div>
+							<p class="portfolio-description">Web-based face recognition app using CNNs and ensemble
+								learning for real-time face detection, age estimation, ethnicity classification, and matching.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Python</span>
+								<span class="portfolio-tag">Streamlit</span>
+								<span class="portfolio-tag">CNN</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/Tugas-Besar-PCD" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 6 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">PoseLight Project</h3>
+								<span class="portfolio-year">2025</span>
+							</div>
+							<p class="portfolio-description">Interactive web application integrating MediaPipe pose
+								detection with Arduino hardware via serial communication to control LED lighting.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Python</span>
+								<span class="portfolio-tag">Streamlit</span>
+								<span class="portfolio-tag">MediaPipe</span>
+								<span class="portfolio-tag">Arduino</span>
+							</div>
+							<a href="https://www.youtube.com/watch?v=MG2dBCu96UQ" target="_blank" class="portfolio-link">
+								Watch Video <span class="icon-youtube"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 7 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Mini Project School Management System</h3>
+								<span class="portfolio-year">2025</span>
+							</div>
+							<p class="portfolio-description">.NET 8 backend for a school management system implementing
+								strict role-based access control using JWT authentication.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">.NET 8</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+								<span class="portfolio-tag">EF Core</span>
+								<span class="portfolio-tag">JWT</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/SchoolManagementSystem" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 8 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card portfolio-card-no-link">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">International Roamer Project</h3>
+								<span class="portfolio-year">2025</span>
+							</div>
+							<p class="portfolio-description">Inbound and Outbound dashboards for Telkomsel processing
+								large-scale telecommunications data to visualize KPI/KQI metrics and rapid fault detection.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">.NET</span>
+								<span class="portfolio-tag">ClickHouse</span>
+								<span class="portfolio-tag">Postman</span>
+							</div>
+						</div>
+					</div>
+					<!-- Project 9 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card portfolio-card-no-link">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Fix Broadband Project</h3>
+								<span class="portfolio-year">2025</span>
+							</div>
+							<p class="portfolio-description">Telkomsel's Fixed Broadband Executive Dashboard tracking
+								nationwide network deployment, regional progress, and design lifecycle analytics.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">.NET</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+								<span class="portfolio-tag">Postman</span>
+							</div>
+						</div>
+					</div>
+					<!-- Project 10 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Basketball Player Position Recommendation Using AHP</h3>
+								<span class="portfolio-year">2026</span>
+							</div>
+							<p class="portfolio-description">Web-based recommendation system implementing the AHP
+								algorithm to evaluate player metrics and generate data-driven position recommendations.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">React</span>
+								<span class="portfolio-tag">Laravel</span>
+								<span class="portfolio-tag">AHP</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/shield-basketball-servicesv2" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 11 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Mini Microservice Application</h3>
+								<span class="portfolio-year">2026</span>
+							</div>
+							<p class="portfolio-description">Distributed e-commerce backend simulation separating
+								Catalog and Order services into independent microservices.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Spring Boot</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+								<span class="portfolio-tag">Microservices</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/MiniMicroservicesApplication" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 12 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Split Bill Application</h3>
+								<span class="portfolio-year">2026</span>
+							</div>
+							<p class="portfolio-description">Backend RESTful API for group expense sharing using a
+								Greedy Algorithm to automate debt settlement and minimize participant transfers.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Spring Boot</span>
+								<span class="portfolio-tag">REST API</span>
+								<span class="portfolio-tag">Greedy Algorithm</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/splitapplication/tree/main" target="_blank"
+								class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 13 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">F1 Race Data</h3>
+								<span class="portfolio-year">2026</span>
+							</div>
+							<p class="portfolio-description">Automated data engineering pipeline collecting, cleaning,
+								and ingesting Kaggle Formula 1 datasets into PostgreSQL with automated validation.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">Python</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+								<span class="portfolio-tag">ETL Pipeline</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/f1-race-data" target="_blank" class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 14 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Formula 1 Race API</h3>
+								<span class="portfolio-year">2026</span>
+							</div>
+							<p class="portfolio-description">Backend REST API delivering F1 championship standings, race
+								schedules, pit stop data, and driver analytics with Swagger docs.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">FastAPI</span>
+								<span class="portfolio-tag">PostgreSQL</span>
+								<span class="portfolio-tag">Swagger</span>
+								<span class="portfolio-tag">Postman</span>
+							</div>
+							<a href="https://github.com/Cobalttt2311/f1-api" target="_blank" class="portfolio-link">
+								View on GitHub <span class="icon-github"></span>
+							</a>
+						</div>
+					</div>
+					<!-- Project 15 -->
+					<div class="portfolio-item">
+						<div class="portfolio-card">
+							<div class="portfolio-card-header">
+								<h3 class="portfolio-title">Tifosi Application</h3>
+								<span class="portfolio-year">2026</span>
+							</div>
+							<p class="portfolio-description">Responsive web dashboard integrating with the F1 backend
+								API to display race status, timezone conversion, lap-by-lap charts, and 70 years of F1 data.</p>
+							<div class="portfolio-tags">
+								<span class="portfolio-tag">HTML</span>
+								<span class="portfolio-tag">CSS</span>
+								<span class="portfolio-tag">JavaScript</span>
+							</div>
+							<a href="https://f1-view-nine.vercel.app/" target="_blank" class="portfolio-link">
+								View Live Demo <span class="icon-globe"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<button class="portfolio-nav-btn next-btn" id="portfolioNextBtn" aria-label="Next Projects">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="9 18 15 12 9 6"></polyline>
+					</svg>
+				</button>
+			</div>
+
+			<div class="portfolio-scroll-footer scroll-reveal delay-2">
+				<div class="portfolio-progress-wrapper">
+					<div class="portfolio-progress-bar" id="portfolioProgressBar"></div>
+				</div>
+				<div class="portfolio-scroll-hint">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+					<span>Drag or scroll horizontally</span>
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+				</div>
+			</div>
 		</div>
 	</section>
+	<!-- .section -->
 
 	<section class="site-section tech-stack-section" id="section-techstack">
 		<div class="container">
 			<div class="row mb-5">
 				<div class="col-md-12 text-center">
-					<div class="section-heading">
+					<div class="section-heading scroll-reveal">
 						<h2>My <strong>Tech Stack</strong></h2>
 					</div>
 				</div>
 			</div>
-			<div class="tech-scroll-container">
+			<div class="tech-scroll-container scroll-reveal delay-1">
 				<!-- C# -->
 				<div class="tech-logo-wrapper">
 					<img src="images/csharp_logo-removebg-preview.png" alt="C#" class="tech-logo">
@@ -503,6 +590,10 @@
 				<div class="tech-logo-wrapper">
 					<img src="images/htmllogo-removebg-preview.png" alt="HTML/CSS" class="tech-logo">
 				</div>
+				<!-- React -->
+				<div class="tech-logo-wrapper">
+					<img src="images/react_logo.png" alt="React" class="tech-logo">
+				</div>
 				<!-- Kotlin -->
 				<div class="tech-logo-wrapper">
 					<img src="images/kotlinlogo-removebg-preview.png" alt="Kotlin" class="tech-logo">
@@ -519,61 +610,88 @@
 				<div class="tech-logo-wrapper">
 					<img src="images/githublogo-removebg-preview.png" alt="GitHub" class="tech-logo">
 				</div>
+				<!-- Linux -->
+				<div class="tech-logo-wrapper">
+					<img src="images/linuxlogo-removebg-preview.png" alt="Linux" class="tech-logo">
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="site-section" id="section-contact">
+	<section class="site-section contact-editorial-section" id="section-contact">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12 mb-5">
-					<div class="section-heading text-center scroll-reveal">
-						<h2>Get <strong>In Touch</strong></h2>
+			<div class="row align-items-center">
+				<!-- Left Editorial Typography -->
+				<div class="col-lg-5 mb-5 mb-lg-0 scroll-reveal from-left delay-1">
+					<div class="editorial-contact-heading">
+						<div class="editorial-line-top">
+							<span class="editorial-word">LET'S</span>
+							<svg class="editorial-geo" width="76" height="76" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+								<circle cx="34" cy="20" r="12" fill="#111111" />
+								<path d="M 16 28 A 28 28 0 0 0 68 58 Z" stroke="rgba(0,0,0,0.22)" stroke-width="1.2" fill="none" />
+							</svg>
+						</div>
+						<div class="editorial-line-mid">GET IN</div>
+						<div class="editorial-line-bot">TOUCH</div>
 					</div>
 				</div>
 
-				<div class="col-md-7 mb-5 mb-md-0 scroll-reveal from-left delay-1">
-					<form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="site-form">
-						<h3 class="mb-5">Get In Touch</h3>
+				<!-- Right Minimalist Underline Form + Contact Details -->
+				<div class="col-lg-7 pl-lg-5 scroll-reveal from-right delay-2">
+					<form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="site-form editorial-form">
 						<input type="hidden" name="access_key" value="4152b99d-517e-4264-9aeb-b983151189ee">
 						<input type="hidden" name="subject" value="New Inquiry from Portfolio">
 						<input type="hidden" name="from_name" value="Nalendra Portfolio">
-						<div class="form-group">
-							<input type="text" name="name" class="form-control px-3 py-4" placeholder="Your Name"
-								required>
+
+						<div class="editorial-field">
+							<label for="contact-name">FULL NAME <span>*</span></label>
+							<input type="text" id="contact-name" name="name" class="editorial-input" required>
 						</div>
-						<div class="form-group">
-							<input type="email" name="email" class="form-control px-3 py-4" placeholder="Your Email"
-								required>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="editorial-field">
+									<label for="contact-email">EMAIL <span>*</span></label>
+									<input type="email" id="contact-email" name="email" class="editorial-input" required>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="editorial-field">
+									<label for="contact-phone">PHONE</label>
+									<input type="tel" id="contact-phone" name="phone" class="editorial-input">
+								</div>
+							</div>
 						</div>
-						<div class="form-group">
-							<input type="tel" name="phone" class="form-control px-3 py-4" placeholder="Your Phone">
+
+						<div class="editorial-field">
+							<label for="contact-message">MESSAGE <span>*</span></label>
+							<textarea id="contact-message" name="message" class="editorial-input editorial-textarea" rows="2" required></textarea>
 						</div>
-						<div class="form-group mb-5">
-							<textarea name="message" class="form-control px-3 py-4" cols="30" rows="10"
-								placeholder="Write a Message" required></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
+
+						<div class="editorial-submit-row">
+							<button type="submit" class="editorial-submit-btn" aria-label="Send Message">
+								<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="5" y1="12" x2="19" y2="12"></line>
+									<polyline points="12 5 19 12 12 19"></polyline>
+								</svg>
+							</button>
 						</div>
 					</form>
-				</div>
-				<div class="col-md-5 pl-md-5">
-					<h3 class="mb-5">My Contact Details</h3>
-					<ul class="site-contact-details">
-						<li>
-							<span class="text-uppercase">Email</span>
-							<a href="mailto:nalendra230905@gmail.com">nalendra230905@gmail.com</a>
-						</li>
-						<li>
-							<span class="text-uppercase">Phone</span>
-							<a href="tel:+6285220661995">+62 852 2066 1995</a>
-						</li>
-						<li>
-							<span class="text-uppercase">Telegram</span>
-							<a href="https://t.me/bredtyopati" target="_blank">t.me/bredtyopati</a>
-						</li>
-					</ul>
+
+					<div class="editorial-contact-grid">
+						<div class="editorial-contact-col">
+							<span class="editorial-contact-label">EMAIL</span>
+							<a href="https://mail.google.com/mail/?view=cm&fs=1&to=nalendra230905@gmail.com" target="_blank" class="editorial-contact-value">nalendra230905@gmail.com</a>
+						</div>
+						<div class="editorial-contact-col">
+							<span class="editorial-contact-label">PHONE</span>
+							<a href="tel:+6285220661995" class="editorial-contact-value">+62 852 2066 1995</a>
+						</div>
+						<div class="editorial-contact-col">
+							<span class="editorial-contact-label">TELEGRAM</span>
+							<a href="https://t.me/bredtyopati" target="_blank" class="editorial-contact-value">t.me/bredtyopati</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -583,30 +701,30 @@
 	<footer class="site-footer">
 		<div class="container">
 
-			<div class="row mb-5">
-				<p class="col-12 text-center">
+			<div class="row mb-4">
+				<div class="col-12 text-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;
-					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
-					made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a
-						href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+					<div class="copyright-pill scroll-reveal" tabindex="0">
+						<span class="copyright-badge">&copy;</span>
+						<span class="copyright-expand">
+							Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+							made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+						</span>
+					</div>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</p>
+				</div>
 			</div>
 
 			<div class="row mb-5">
 				<div class="col-md-12 text-center">
 					<p>
-						<a href="https://www.instagram.com/bredtyopati/" target="_blank" class="social-item"><span
-								class="icon-instagram2"></span></a>
-						<a href="https://github.com/Cobalttt2311" target="_blank" class="social-item"><span
-								class="icon-github"></span></a>
-						<a href="https://www.linkedin.com/in/nalendra-praja/" target="_blank" class="social-item"><span
-								class="icon-linkedin2"></span></a>
-						<a href="https://t.me/bredtyopati" target="_blank" class="social-item"><span
-								class="icon-telegram"></span></a>
-						<a href="mailto:nalendra230905@gmail.com" class="social-item"><span
-								class="icon-mail2"></span></a>
+						<span class="d-inline-block scroll-reveal delay-1"><a href="https://www.instagram.com/bredtyopati/" target="_blank" class="social-item"><span class="icon-instagram2"></span></a></span>
+						<span class="d-inline-block scroll-reveal delay-2"><a href="https://github.com/Cobalttt2311" target="_blank" class="social-item"><span class="icon-github"></span></a></span>
+						<span class="d-inline-block scroll-reveal delay-3"><a href="https://www.linkedin.com/in/nalendra-praja/" target="_blank" class="social-item"><span class="icon-linkedin2"></span></a></span>
+						<span class="d-inline-block scroll-reveal delay-4"><a href="https://t.me/bredtyopati" target="_blank" class="social-item"><span class="icon-telegram"></span></a></span>
+						<span class="d-inline-block scroll-reveal delay-5"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=nalendra230905@gmail.com" target="_blank" class="social-item"><span class="icon-mail2"></span></a></span>
 					</p>
 				</div>
 			</div>
@@ -735,8 +853,88 @@
 			container.addEventListener('scroll', updateControls, { passive: true });
 			window.addEventListener('resize', updateControls);
 
+			// Auto-scroll controller (pauses on hover, drag, touch, or button click)
+			var isPortfolioHovered = false;
+			var isAutoResetting = false;
+			var portfolioLastTime = null;
+			var portfolioExactScroll = 0;
+			var portfolioSpeed = 35; // pixels per second
+
+			container.addEventListener('mouseenter', function () { isPortfolioHovered = true; });
+			container.addEventListener('mouseleave', function () { isPortfolioHovered = false; });
+			container.addEventListener('touchstart', function () { isPortfolioHovered = true; }, { passive: true });
+			container.addEventListener('touchend', function () {
+				setTimeout(function () { isPortfolioHovered = false; }, 1500);
+			});
+
+			if (prevBtn) {
+				prevBtn.addEventListener('click', function () {
+					isPortfolioHovered = true;
+					setTimeout(function () { isPortfolioHovered = false; }, 2500);
+				});
+			}
+			if (nextBtn) {
+				nextBtn.addEventListener('click', function () {
+					isPortfolioHovered = true;
+					setTimeout(function () { isPortfolioHovered = false; }, 2500);
+				});
+			}
+
+			function autoScrollPortfolio(timestamp) {
+				if (portfolioLastTime === null) portfolioLastTime = timestamp;
+				var dt = (timestamp - portfolioLastTime) / 1000;
+				portfolioLastTime = timestamp;
+
+				var maxScroll = container.scrollWidth - container.clientWidth;
+				if (!isPortfolioHovered && !isDown && !isAutoResetting && maxScroll > 0) {
+					if (Math.abs(container.scrollLeft - portfolioExactScroll) > 3) {
+						portfolioExactScroll = container.scrollLeft;
+					}
+					portfolioExactScroll += portfolioSpeed * Math.min(dt, 0.05);
+
+					if (portfolioExactScroll >= maxScroll - 1) {
+						isAutoResetting = true;
+						setTimeout(function () {
+							var startPos = container.scrollLeft;
+							var duration = 900;
+							var resetStartTime = null;
+
+							function animateBackToStart(now) {
+								if (resetStartTime === null) resetStartTime = now;
+								var elapsed = now - resetStartTime;
+								var progress = Math.min(elapsed / duration, 1);
+								// Ease in-out cubic
+								var ease = progress < 0.5
+									? 4 * progress * progress * progress
+									: 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+								container.scrollLeft = startPos * (1 - ease);
+
+								if (progress < 1) {
+									requestAnimationFrame(animateBackToStart);
+								} else {
+									container.scrollLeft = 0;
+									portfolioExactScroll = 0;
+									portfolioLastTime = null;
+									isAutoResetting = false;
+								}
+							}
+							requestAnimationFrame(animateBackToStart);
+						}, 800);
+					} else {
+						container.scrollLeft = portfolioExactScroll;
+					}
+				} else {
+					portfolioExactScroll = container.scrollLeft;
+				}
+				requestAnimationFrame(autoScrollPortfolio);
+			}
+
 			// Initial state setup
-			setTimeout(updateControls, 100);
+			setTimeout(function () {
+				updateControls();
+				requestAnimationFrame(autoScrollPortfolio);
+			}, 150);
 		})();
 
 		$(document).ready(function () {
@@ -795,6 +993,73 @@
 					showToast('download', 'CV Downloaded!', 'CV Nalendra Praja has been downloaded successfully. Thank you!');
 				}, 500);
 			});
+
+			// Tech Stack Auto-Scroll + Manual Scroll & Drag (No Scrollbar)
+			(function () {
+				var techContainer = document.querySelector('.tech-scroll-container');
+				if (!techContainer) return;
+
+				// Duplicate items once for seamless infinite loop
+				var originalItems = Array.from(techContainer.children);
+				originalItems.forEach(function (item) {
+					var clone = item.cloneNode(true);
+					clone.setAttribute('aria-hidden', 'true');
+					techContainer.appendChild(clone);
+				});
+
+				var isPaused = false;
+				var isDragging = false;
+				var startX = 0;
+				var scrollStart = 0;
+				var lastTime = null;
+				var exactScroll = 0;
+				var pixelsPerSecond = 45;
+
+				function autoScroll(timestamp) {
+					if (lastTime === null) lastTime = timestamp;
+					var dt = (timestamp - lastTime) / 1000;
+					lastTime = timestamp;
+
+					if (!isPaused && !isDragging) {
+						// Sync with current scrollLeft if user scrolled manually
+						if (Math.abs(techContainer.scrollLeft - exactScroll) > 2) {
+							exactScroll = techContainer.scrollLeft;
+						}
+						exactScroll += pixelsPerSecond * Math.min(dt, 0.05);
+						var halfWidth = techContainer.scrollWidth / 2;
+						if (exactScroll >= halfWidth) {
+							exactScroll -= halfWidth;
+						}
+						techContainer.scrollLeft = exactScroll;
+					} else {
+						exactScroll = techContainer.scrollLeft;
+					}
+					requestAnimationFrame(autoScroll);
+				}
+
+				techContainer.addEventListener('mouseenter', function () { isPaused = true; });
+				techContainer.addEventListener('mouseleave', function () {
+					isPaused = false;
+					isDragging = false;
+				});
+				techContainer.addEventListener('touchstart', function () { isPaused = true; }, { passive: true });
+				techContainer.addEventListener('touchend', function () { isPaused = false; });
+
+				techContainer.addEventListener('mousedown', function (e) {
+					isDragging = true;
+					startX = e.pageX - techContainer.offsetLeft;
+					scrollStart = techContainer.scrollLeft;
+				});
+				window.addEventListener('mouseup', function () { isDragging = false; });
+				techContainer.addEventListener('mousemove', function (e) {
+					if (!isDragging) return;
+					e.preventDefault();
+					var x = e.pageX - techContainer.offsetLeft;
+					techContainer.scrollLeft = scrollStart - (x - startX) * 1.3;
+				});
+
+				requestAnimationFrame(autoScroll);
+			})();
 		});
 
 		// ── Toast Notification System ──────────────────────────────────────────
@@ -860,18 +1125,18 @@
 	<!-- Scroll Reveal Observer -->
 	<script>
 		(function () {
-			// IntersectionObserver: reveal elements when they enter viewport
+			// IntersectionObserver: entrance on enter, closing on leave
 			var observer = new IntersectionObserver(function (entries) {
 				entries.forEach(function (entry) {
 					if (entry.isIntersecting) {
 						entry.target.classList.add('revealed');
-						// Once revealed, stop watching (no re-hide on scroll up)
-						observer.unobserve(entry.target);
+					} else {
+						entry.target.classList.remove('revealed');
 					}
 				});
 			}, {
-				threshold: 0.12,   // trigger when 12% of element is visible
-				rootMargin: '0px 0px -40px 0px'
+				threshold: 0.08,
+				rootMargin: '0px 0px -20px 0px'
 			});
 
 			// Observe all scroll-reveal elements
