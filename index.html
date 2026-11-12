@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css?v=3.6">
+	<link rel="stylesheet" href="css/style.css?v=3.7">
 
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
@@ -869,11 +869,17 @@
 			container.addEventListener('mouseleave', function () { isPortfolioHovered = false; });
 			container.addEventListener('touchstart', function () {
 				clearTimeout(portfolioTouchTimer);
+				isDown = false;
 				isPortfolioHovered = true;
 			}, { passive: true });
 			container.addEventListener('touchend', function () {
 				clearTimeout(portfolioTouchTimer);
+				isDown = false;
 				portfolioTouchTimer = setTimeout(function () { isPortfolioHovered = false; }, 1600);
+			});
+			container.addEventListener('touchcancel', function () {
+				isDown = false;
+				isPortfolioHovered = false;
 			});
 
 			if (prevBtn) {
@@ -1054,11 +1060,17 @@
 				});
 				techContainer.addEventListener('touchstart', function () {
 					clearTimeout(techTouchTimer);
+					isDragging = false;
 					isPaused = true;
 				}, { passive: true });
 				techContainer.addEventListener('touchend', function () {
 					clearTimeout(techTouchTimer);
+					isDragging = false;
 					techTouchTimer = setTimeout(function () { isPaused = false; }, 1600);
+				});
+				techContainer.addEventListener('touchcancel', function () {
+					isDragging = false;
+					isPaused = false;
 				});
 
 				techContainer.addEventListener('mousedown', function (e) {
