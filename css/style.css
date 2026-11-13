@@ -182,8 +182,9 @@ a {
     margin: 0 auto;
     color: rgba(255, 255, 255, 0.5); }
 
-.site-section {
-  padding: 5em 0; }
+.site-section, section[id] {
+  padding: 5em 0;
+  scroll-margin-top: 85px; }
 
 .section-heading {
   margin-bottom: 30px;
@@ -1080,6 +1081,290 @@ a {
 }
 
 /* ========================================
+   EDUCATION HIGHLIGHT SECTION
+======================================== */
+.edu-slider-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 54px; /* Ruang aman agar tombol tidak menghalangi teks */
+}
+
+.edu-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.edu-nav-btn:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.edu-nav-btn:focus,
+.edu-nav-btn:focus-visible,
+.edu-nav-btn:active,
+.portfolio-nav-btn:focus,
+.portfolio-nav-btn:focus-visible,
+.portfolio-nav-btn:active {
+  outline: none !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.edu-nav-btn:hover:focus,
+.portfolio-nav-btn:hover:focus {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28) !important;
+}
+
+.edu-nav-btn.prev-btn {
+  left: 0; /* Di sisi paling kiri luar area teks */
+}
+
+.edu-nav-btn.next-btn {
+  right: 0; /* Di sisi paling kanan luar area konten */
+}
+
+.edu-highlight-card {
+  position: relative;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  padding: 24px 0 16px 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.edu-slides-viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.edu-slides-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.edu-slides-viewport.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+  scroll-behavior: auto;
+}
+
+.edu-slides-track {
+  display: flex;
+  width: 200%;
+}
+
+.edu-slide-item {
+  width: 50%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 165px;
+  padding: 12px 24px 0 0;
+}
+
+/* Logo Crest in Top-Right (Solid, Tidak Terpotong) */
+.edu-watermark-wrap {
+  position: absolute;
+  top: 8px; /* Masuk aman ke dalam, bebas dari clipping overflow */
+  right: 20px;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.edu-watermark-img {
+  height: 92px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 1;
+  filter: none;
+  transition: transform 0.3s ease;
+}
+
+.edu-slide-item:hover .edu-watermark-img {
+  transform: scale(1.03);
+}
+
+/* Content Area in Bottom-Left */
+.edu-content-wrap {
+  position: relative;
+  z-index: 3;
+  max-width: 580px;
+}
+
+.edu-badge-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 3px;
+}
+
+.edu-institution-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(23px, 3.2vw, 28px); /* PALING GEDE */
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: 0.02em;
+  margin: 0 0 1px 0; /* LEBIH MEPET */
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.edu-period-meta {
+  display: block;
+  font-size: 13px; /* KECIL PROPORSIONAL */
+  font-weight: 500;
+  color: #666666;
+  letter-spacing: 0.01em;
+  margin: 0 0 4px 0; /* LEBIH MEPET */
+  line-height: 1.15;
+}
+
+.edu-black-divider {
+  height: 1px; /* GAUSAH BOLD (1PX HALUS) */
+  background: rgba(0, 0, 0, 0.28);
+  width: 100%;
+  max-width: 320px;
+  margin: 4px 0 5px 0; /* LEBIH MEPET */
+}
+
+.edu-degree-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14.5px;
+  font-weight: 400; /* GAUSAH BOLD (REGULAR) */
+  color: #2b2b2b;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Segmented Progress Indicators */
+.edu-segmented-nav {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.edu-seg-item {
+  flex: 1;
+  height: 2.5px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.edu-seg-item:hover {
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.edu-seg-fill {
+  height: 100%;
+  width: 0%;
+  background: #3b82f6; /* Warna biru */
+  border-radius: 2px;
+  transition: width 0.08s linear;
+}
+
+.edu-seg-item.completed .edu-seg-fill {
+  width: 100% !important;
+}
+
+@media (max-width: 767.98px) {
+  .edu-highlight-card {
+    padding: 18px 0 10px 0;
+  }
+
+  .edu-watermark-wrap {
+    top: 6px;
+    right: 6px;
+  }
+
+  .edu-watermark-img {
+    height: 65px; /* Lebih besar di mobile juga */
+    max-width: 130px;
+  }
+
+  .edu-slide-item {
+    min-height: 145px;
+    padding-right: 0;
+  }
+
+  .edu-institution-name {
+    font-size: 20px;
+  }
+
+  .edu-black-divider {
+    max-width: 100%;
+    margin: 4px 0 5px 0;
+  }
+
+  .edu-segmented-nav {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .edu-slider-wrapper {
+    padding: 0 40px;
+  }
+
+  .edu-nav-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .edu-nav-btn.prev-btn {
+    left: 0;
+  }
+
+  .edu-nav-btn.next-btn {
+    right: 0;
+  }
+}
+
+/* ========================================
    MODERN INTERACTIVE JOB EXPERIENCE ROWS
 ======================================== */
 .exp-list-wrapper {
@@ -1097,7 +1382,9 @@ a {
   margin: 0;
   cursor: pointer;
   outline: none;
-  transition: background 0.25s ease;
+  transition: background 0.25s ease,
+              opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   -webkit-tap-highlight-color: transparent;
 }
 

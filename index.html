@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="fonts/icomoon/style.css">
 
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css?v=4.2">
+	<link rel="stylesheet" href="css/style.css?v=5.5">
 
 	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
@@ -104,39 +104,64 @@
 						<h2>My <strong>Resume</strong></h2>
 					</div>
 				</div>
+				<!-- Education Highlight Section -->
+				<div class="col-md-12 mb-5">
+					<div class="edu-slider-wrapper">
+						<button class="edu-nav-btn prev-btn" id="eduPrevBtn" aria-label="Previous Slide">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="15 18 9 12 15 6"></polyline>
+							</svg>
+						</button>
 
-				<!-- Education Subsection -->
-				<div class="col-md-12 mb-5 scroll-reveal from-left delay-1">
-					<h2 class="mb-4"
-						style="border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 10px; color: #000;">Education
-					</h2>
-					<div style="display: flex; align-items: center; gap: 20px; margin-bottom: 24px;">
-						<img src="images/Logo_Binus_University.png" alt="Binus University Logo"
-							style="width: 60px; height: 60px; object-fit: contain; flex-shrink: 0;">
-						<div>
-							<h3 style="color: #000; font-size: 20px; font-weight: 600; margin: 0 0 5px 0;">Bachelor of
-								Computer Science</h3>
-							<span
-								style="color: #555; font-size: 15px; font-weight: 500; display: block; margin-bottom: 3px;">Binus
-								University - Online</span>
-							<span
-								style="color: #777; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block;"><span
-									class="icon-calendar"></span> 2026 - Present</span>
+						<div class="edu-highlight-card scroll-reveal delay-1" id="eduHighlightCard">
+							<div class="edu-slides-viewport">
+								<div class="edu-slides-track" id="eduSlidesTrack">
+									<!-- Slide 1: POLBAN (Pertama) -->
+									<div class="edu-slide-item active" data-index="0">
+										<div class="edu-watermark-wrap">
+											<img src="images/polban-removebg-preview.png" alt="Politeknik Negeri Bandung Crest" class="edu-watermark-img">
+										</div>
+										<div class="edu-content-wrap">
+											<span class="edu-badge-label">ACADEMIC BACKGROUND</span>
+											<h3 class="edu-institution-name">POLITEKNIK NEGERI BANDUNG</h3>
+											<span class="edu-period-meta">Bandung &bull; 2023 &mdash; 2026</span>
+											<div class="edu-black-divider"></div>
+											<h4 class="edu-degree-title">Associate of Computer Engineering</h4>
+										</div>
+									</div>
+
+									<!-- Slide 2: BINUS (Kedua) -->
+									<div class="edu-slide-item" data-index="1">
+										<div class="edu-watermark-wrap">
+											<img src="images/Logo_Binus_University.png" alt="Binus University Logo" class="edu-watermark-img">
+										</div>
+										<div class="edu-content-wrap">
+											<span class="edu-badge-label">ACADEMIC BACKGROUND</span>
+											<h3 class="edu-institution-name">BINUS UNIVERSITY</h3>
+											<span class="edu-period-meta">Online &bull; 2026 &mdash; Present</span>
+											<div class="edu-black-divider"></div>
+											<h4 class="edu-degree-title">Bachelor of Computer Science</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Segmented Progress Bar (Bawah) -->
+							<div class="edu-segmented-nav" id="eduSegmentedNav">
+								<div class="edu-seg-item active" data-target="0" title="Slide 1: Politeknik Negeri Bandung">
+									<div class="edu-seg-fill"></div>
+								</div>
+								<div class="edu-seg-item" data-target="1" title="Slide 2: Binus University">
+									<div class="edu-seg-fill"></div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div style="display: flex; align-items: center; gap: 20px;">
-						<img src="images/polban-removebg-preview.png" alt="Politeknik Negeri Bandung Logo"
-							style="width: 60px; height: 60px; object-fit: contain; flex-shrink: 0;">
-						<div>
-							<h3 style="color: #000; font-size: 20px; font-weight: 600; margin: 0 0 5px 0;">Associate of
-								Computer Engineering</h3>
-							<span
-								style="color: #555; font-size: 15px; font-weight: 500; display: block; margin-bottom: 3px;">Politeknik
-								Negeri Bandung - Bandung</span>
-							<span
-								style="color: #777; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; display: block;"><span
-									class="icon-calendar"></span> 2023 - 2026</span>
-						</div>
+
+						<button class="edu-nav-btn next-btn" id="eduNextBtn" aria-label="Next Slide">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="9 18 15 12 9 6"></polyline>
+							</svg>
+						</button>
 					</div>
 				</div>
 
@@ -751,7 +776,7 @@
 
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="js/custom.js?v=2.0"></script>
 
 	<script>
 		// Portfolio Horizontal Scroll Controller (Bounded scrolling with controls & drag support)
@@ -796,6 +821,7 @@
 			// Scroll Navigation Buttons
 			if (prevBtn) {
 				prevBtn.addEventListener('click', function () {
+					this.blur();
 					var scrollAmount = Math.max(container.clientWidth * 0.75, 340);
 					container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 				});
@@ -803,6 +829,7 @@
 
 			if (nextBtn) {
 				nextBtn.addEventListener('click', function () {
+					this.blur();
 					var scrollAmount = Math.max(container.clientWidth * 0.75, 340);
 					container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 				});
@@ -1112,6 +1139,164 @@
 			$('.exp-row-item').on('mouseleave', function () {
 				$(this).removeClass('is-expanded');
 			});
+
+			// ── Education Highlight Slider Controller ────────────────────────────
+			(function () {
+				var viewport = document.querySelector('.edu-slides-viewport');
+				var card = document.getElementById('eduHighlightCard');
+				var segs = document.querySelectorAll('.edu-seg-item');
+				if (!viewport || !card || segs.length === 0) return;
+
+				var currentIndex = 0;
+				var totalSlides = 2;
+				var slideDuration = 4500; // 4.5 seconds per slide
+				var progress = 0;
+				var isPaused = false;
+				var lastTime = performance.now();
+
+				function updateSlide(index) {
+					currentIndex = index;
+					var slideWidth = viewport.clientWidth;
+					viewport.scrollTo({ left: currentIndex * slideWidth, behavior: 'smooth' });
+
+					segs.forEach(function (seg, i) {
+						var fill = seg.querySelector('.edu-seg-fill');
+						if (i < currentIndex) {
+							seg.classList.add('completed');
+							seg.classList.remove('active');
+							if (fill) fill.style.width = '100%';
+						} else if (i === currentIndex) {
+							seg.classList.remove('completed');
+							seg.classList.add('active');
+							if (fill) fill.style.width = (progress * 100) + '%';
+						} else {
+							seg.classList.remove('completed', 'active');
+							if (fill) fill.style.width = '0%';
+						}
+					});
+				}
+
+				function loop(now) {
+					var dt = now - lastTime;
+					lastTime = now;
+
+					if (!isPaused) {
+						progress += dt / slideDuration;
+						if (progress >= 1) {
+							progress = 0;
+							var nextIndex = (currentIndex + 1) % totalSlides;
+							updateSlide(nextIndex);
+						} else {
+							var activeSeg = segs[currentIndex];
+							if (activeSeg) {
+								var fill = activeSeg.querySelector('.edu-seg-fill');
+								if (fill) fill.style.width = (progress * 100) + '%';
+							}
+						}
+					}
+
+					requestAnimationFrame(loop);
+				}
+
+				// Hover pause & resume
+				card.addEventListener('mouseenter', function () { isPaused = true; });
+				card.addEventListener('mouseleave', function () {
+					isPaused = false;
+					lastTime = performance.now();
+				});
+
+				// Direct segment click
+				segs.forEach(function (seg, idx) {
+					seg.addEventListener('click', function () {
+						progress = 0;
+						updateSlide(idx);
+					});
+				});
+
+				// Previous & Next circular navigation buttons
+				var prevBtn = document.getElementById('eduPrevBtn');
+				var nextBtn = document.getElementById('eduNextBtn');
+
+				if (prevBtn) {
+					prevBtn.addEventListener('click', function (e) {
+						e.stopPropagation();
+						this.blur();
+						progress = 0;
+						updateSlide((currentIndex - 1 + totalSlides) % totalSlides);
+					});
+				}
+
+				if (nextBtn) {
+					nextBtn.addEventListener('click', function (e) {
+						e.stopPropagation();
+						this.blur();
+						progress = 0;
+						updateSlide((currentIndex + 1) % totalSlides);
+					});
+				}
+
+				// Mouse Drag-to-Scroll Left/Right
+				var isDragging = false;
+				var startX = 0;
+				var scrollStart = 0;
+				var hasMoved = false;
+
+				viewport.addEventListener('mousedown', function (e) {
+					isDragging = true;
+					hasMoved = false;
+					isPaused = true;
+					startX = e.pageX;
+					scrollStart = viewport.scrollLeft;
+					viewport.classList.add('is-dragging');
+				});
+
+				window.addEventListener('mousemove', function (e) {
+					if (!isDragging) return;
+					var delta = e.pageX - startX;
+					if (Math.abs(delta) > 5) hasMoved = true;
+					viewport.scrollLeft = scrollStart - delta;
+				});
+
+				window.addEventListener('mouseup', function (e) {
+					if (!isDragging) return;
+					isDragging = false;
+					viewport.classList.remove('is-dragging');
+					isPaused = false;
+					lastTime = performance.now();
+
+					if (hasMoved) {
+						var slideWidth = viewport.clientWidth;
+						var snappedIndex = Math.round(viewport.scrollLeft / slideWidth);
+						snappedIndex = Math.max(0, Math.min(snappedIndex, totalSlides - 1));
+						progress = 0;
+						updateSlide(snappedIndex);
+					}
+				});
+
+				// Mobile touch scroll sync
+				var touchTimeout = null;
+				viewport.addEventListener('scroll', function () {
+					if (isDragging) return;
+					clearTimeout(touchTimeout);
+					touchTimeout = setTimeout(function () {
+						var slideWidth = viewport.clientWidth;
+						if (!slideWidth) return;
+						var detectedIndex = Math.round(viewport.scrollLeft / slideWidth);
+						if (detectedIndex !== currentIndex && detectedIndex >= 0 && detectedIndex < totalSlides) {
+							currentIndex = detectedIndex;
+							progress = 0;
+							updateSlide(currentIndex);
+						}
+					}, 80);
+				}, { passive: true });
+
+				// Initial trigger
+				updateSlide(0);
+				requestAnimationFrame(function (time) {
+					lastTime = time;
+					loop(time);
+				});
+			})();
 		});
 
 		// ── Toast Notification System ──────────────────────────────────────────
