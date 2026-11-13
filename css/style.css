@@ -1098,16 +1098,23 @@ a {
   cursor: pointer;
   outline: none;
   transition: background 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .exp-row-item:last-child {
   border-bottom: none;
 }
 
-.exp-row-item:hover,
-.exp-row-item.is-expanded,
-.exp-row-item:focus-visible {
+/* Touch device active state */
+.exp-row-item.is-expanded {
   background: #fafafa;
+}
+
+/* Desktop hover state (pure hover, never sticky) */
+@media (hover: hover) and (pointer: fine) {
+  .exp-row-item:hover {
+    background: #fafafa;
+  }
 }
 
 .exp-row-header {
@@ -1213,10 +1220,18 @@ a {
   opacity: 0;
 }
 
-.exp-row-item:hover .exp-row-body,
+/* Touch active state */
 .exp-row-item.is-expanded .exp-row-body {
   grid-template-rows: 1fr;
   opacity: 1;
+}
+
+/* Desktop hover (pure hover) */
+@media (hover: hover) and (pointer: fine) {
+  .exp-row-item:hover .exp-row-body {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
 }
 
 .exp-body-inner {
