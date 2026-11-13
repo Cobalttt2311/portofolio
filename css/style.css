@@ -1151,7 +1151,7 @@ a {
   border-radius: 0;
   border: none;
   box-shadow: none;
-  padding: 24px 0 16px 0;
+  padding: 32px 0 24px 0; /* Diperluas */
   overflow: hidden;
   user-select: none;
 }
@@ -1190,15 +1190,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 165px;
-  padding: 12px 24px 0 0;
+  min-height: 235px; /* Diperluas lebih lapang */
+  padding: 16px 24px 0 0;
 }
 
-/* Logo Crest in Top-Right (Solid, Tidak Terpotong) */
+/* Logo Crest in Top-Right (Solid, Tidak Terpotong, Jauh Lebih Besar) */
 .edu-watermark-wrap {
   position: absolute;
-  top: 8px; /* Masuk aman ke dalam, bebas dari clipping overflow */
-  right: 20px;
+  top: 10px;
+  right: 24px;
   z-index: 2;
   pointer-events: none;
   display: flex;
@@ -1207,9 +1207,9 @@ a {
 }
 
 .edu-watermark-img {
-  height: 92px;
+  height: 145px; /* Jauh lebih besar */
   width: auto;
-  max-width: 180px;
+  max-width: 250px;
   object-fit: contain;
   opacity: 1;
   filter: none;
@@ -1314,21 +1314,21 @@ a {
 
 @media (max-width: 767.98px) {
   .edu-highlight-card {
-    padding: 18px 0 10px 0;
+    padding: 24px 0 16px 0;
   }
 
   .edu-watermark-wrap {
     top: 6px;
-    right: 6px;
+    right: 8px;
   }
 
   .edu-watermark-img {
-    height: 65px; /* Lebih besar di mobile juga */
-    max-width: 130px;
+    height: 90px; /* Lebih besar di mobile */
+    max-width: 160px;
   }
 
   .edu-slide-item {
-    min-height: 145px;
+    min-height: 195px;
     padding-right: 0;
   }
 
