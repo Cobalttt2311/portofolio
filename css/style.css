@@ -839,6 +839,21 @@ a {
   transform: translateY(-50%) scale(1.08);
 }
 
+.portfolio-nav-btn:focus,
+.portfolio-nav-btn:focus-visible,
+.portfolio-nav-btn:active {
+  outline: none !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.portfolio-nav-btn:hover:focus {
+  background: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 22px rgba(59, 130, 246, 0.3) !important;
+}
+
 .portfolio-nav-btn:disabled,
 .portfolio-nav-btn.btn-disabled {
   opacity: 0.25;
@@ -1086,63 +1101,7 @@ a {
 .edu-slider-wrapper {
   position: relative;
   width: 100%;
-  padding: 0 54px; /* Ruang aman agar tombol tidak menghalangi teks */
-}
-
-.edu-nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #1e293b;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.25s ease;
-  outline: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.edu-nav-btn:hover {
-  background: #3b82f6;
-  border-color: #3b82f6;
-  color: #ffffff;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28);
-  transform: translateY(-50%) scale(1.08);
-}
-
-.edu-nav-btn:focus,
-.edu-nav-btn:focus-visible,
-.edu-nav-btn:active,
-.portfolio-nav-btn:focus,
-.portfolio-nav-btn:focus-visible,
-.portfolio-nav-btn:active {
-  outline: none !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-  border: 1px solid #e2e8f0 !important;
-}
-
-.edu-nav-btn:hover:focus,
-.portfolio-nav-btn:hover:focus {
-  background: #3b82f6 !important;
-  border-color: #3b82f6 !important;
-  color: #ffffff !important;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.28) !important;
-}
-
-.edu-nav-btn.prev-btn {
-  left: 0; /* Di sisi paling kiri luar area teks */
-}
-
-.edu-nav-btn.next-btn {
-  right: 0; /* Di sisi paling kanan luar area konten */
+  padding: 0;
 }
 
 .edu-highlight-card {
@@ -1346,14 +1305,6 @@ a {
   .edu-segmented-nav {
     margin-top: 18px;
     gap: 8px;
-  }
-
-  .edu-slider-wrapper {
-    padding: 0;
-  }
-
-  .edu-nav-btn {
-    display: none !important;
   }
 }
 
