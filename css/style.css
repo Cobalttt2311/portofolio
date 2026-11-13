@@ -1079,16 +1079,219 @@ a {
   color: #333;
 }
 
-/* Resume item flat monochrome hover */
-.resume-item {
-  transition: transform 0.25s ease,
-              border-color 0.25s ease;
+/* ========================================
+   MODERN INTERACTIVE JOB EXPERIENCE ROWS
+======================================== */
+.exp-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  border-bottom: none;
 }
 
-.resume-item:hover {
-  transform: translateY(-3px);
-  box-shadow: none;
-  border-color: #111111 !important;
+.exp-row-item {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: transparent;
+  border-radius: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.25s ease;
+}
+
+.exp-row-item:last-child {
+  border-bottom: none;
+}
+
+.exp-row-item:hover,
+.exp-row-item.is-expanded,
+.exp-row-item:focus-visible {
+  background: #fafafa;
+}
+
+.exp-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 12px;
+  user-select: none;
+}
+
+.exp-col-company {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1.2;
+  min-width: 0;
+}
+
+.exp-logo-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exp-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.exp-company-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.exp-company-name {
+  color: #111111;
+  font-size: 16.5px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exp-company-location {
+  color: #777777;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.exp-col-role {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.exp-role-title {
+  color: #111111;
+  font-size: 15.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.exp-col-period {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.exp-period-text {
+  color: #666666;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Expandable row body using CSS Grid 0fr -> 1fr */
+.exp-row-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.3s ease;
+  opacity: 0;
+}
+
+.exp-row-item:hover .exp-row-body,
+.exp-row-item.is-expanded .exp-row-body {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.exp-body-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding: 0 12px 24px 72px;
+}
+
+.exp-desc {
+  color: #555555;
+  font-size: 14.5px;
+  line-height: 1.65;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+.exp-points {
+  margin: 0;
+  padding-left: 18px;
+  list-style-type: disc;
+}
+
+.exp-points li {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+  text-align: justify;
+}
+
+.exp-points li:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile responsive styles for Job Experience Rows */
+@media (max-width: 768px) {
+  .exp-row-header {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 18px 8px;
+  }
+
+  .exp-col-company {
+    flex: 1 1 55%;
+  }
+
+  .exp-col-period {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .exp-col-role {
+    flex: 1 1 100%;
+    padding-left: 60px;
+    margin-top: 2px;
+  }
+
+  .exp-body-inner {
+    padding: 0 8px 18px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-company-name {
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  .exp-role-title {
+    font-size: 14px;
+  }
+
+  .exp-period-text {
+    font-size: 12.5px;
+  }
 }
 
 /* Tech logo wrapper — keep original grayscale transition only */
