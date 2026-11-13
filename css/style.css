@@ -1347,20 +1347,11 @@ a {
   }
 
   .edu-slider-wrapper {
-    padding: 0 40px;
+    padding: 0;
   }
 
   .edu-nav-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .edu-nav-btn.prev-btn {
-    left: 0;
-  }
-
-  .edu-nav-btn.next-btn {
-    right: 0;
+    display: none !important;
   }
 }
 
